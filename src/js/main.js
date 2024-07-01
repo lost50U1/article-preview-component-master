@@ -1,40 +1,28 @@
 const btn = document.getElementById("btn");
-const footerContainer = document.getElementById("footer");
+const footerContainer = document.getElementById("footer-container");
+const mobileContainer = document.getElementById("footer-container2");
 
 btn.addEventListener("click", () => {
-  footerContainer.style.display = "none";
+  if()
+  footerContainer.classList.add("hidden");
+  mobileContainer.classList.remove("hidden");
   /* create two variables with 1 with mobile layout 2 with desktop layout and make it check for sm: class with if else
     method two create two footers with different id and create another footer variable
     and improving it instead of using template literal make two footers one for mobile and one for
     desktop on the html and make it none and block with js and by adding hidden class using tailwind*/
-  footerContainer.innerHTML = `
- <div id="footer">
-        <div
-          class="flex justify-between items-center w-full bg-VeryDarkGrayishBlue px-8 py-4"
-        >
-          <div class="flex items-center gap-5">
-            <div>
-              <p class="text-DesaturatedDarkBlue">S&nbsp;&nbsp;H&nbsp;&nbsp;A&nbsp;&nbsp;R&nbsp;&nbsp;E</p>
-            </div>
-            <div class="flex gap-3">
-              <img src="images/icon-facebook.svg" alt="" />
-              <img src="images/icon-twitter.svg" alt="" />
-              <img src="images/icon-pinterest.svg" alt="" />
-            </div>
-          </div>
-          <div>
-            <button
-              id="btn"
-              type="button"
-              class="bg-DesaturatedDarkBlue px-3 py-2 rounded-full"
-            >
-              <ion-icon
-                class="text-LightGrayishBlue"
-                name="arrow-redo"
-              ></ion-icon>
-            </button>
-          </div>
-        </div>
-      </div>`;
-  footerContainer.style.display = "block";
+
+  // Todo: new method
+  /*
+  add: add a class (if it’s not already there).
+remove: remove a class (if it is already there).
+toggle: remove the class if it’s there and add it if not.
+Favour style updates rather than modifying the DOM
+button.className = 'active' // className is 'active'
+button.classList.add('hidden') // className is 'active hidden'
+button.classList.add('hidden') // className is still 'active hidden'
+button.classList.toggle('active') // className is 'hidden'
+button.classList.toggle('alert') // className is 'hidden alert'
+button.classList.remove('hidden') // className is 'alert'
+and use arrow function
+    */
 });

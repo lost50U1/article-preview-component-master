@@ -63,7 +63,10 @@
           </p>
         </div>
         <div id="footer">
-          <div class="flex justify-between items-center w-full pt-4 pb-4">
+          <div
+            id="footer-container"
+            class="flex justify-between items-center w-full pt-4 pb-4"
+          >
             <div class="flex items-center gap-5 pl-8">
               <div>
                 <img
@@ -84,16 +87,42 @@
               <button
                 id="btn"
                 type="button"
-                class="bg-LightGrayishBlue px-3 py-2 rounded-full"
+                class="bg-LightGrayishBlue hover:bg-GrayishBlue active:bg-GrayishBlue px-3 py-2 rounded-full"
               >
                 <ion-icon
-                  class="text-VeryDarkGrayishBlue"
+                  class="text-VeryDarkGrayishBlue hover:text-LightGrayishBlue active:text-LightGrayishBlue"
+                  name="arrow-redo"
+                ></ion-icon>
+              </button>
+            </div>
+          </div>
+          <div
+            id="footer-container2"
+            class="flex justify-between items-center w-full pt-4 pb-4 hidden bg-VeryDarkGrayishBlue"
+          >
+            <div class="flex items-center gap-5 pl-8">
+              <div class="flex items-center gap-4">
+                <p class="uppercase text-GrayishBlue tracking-[.25em]">share</p>
+                <span><img src="images/icon-facebook.svg" alt="" /></span>
+                <span><img src="images/icon-twitter.svg" alt="" /></span>
+                <span><img src="images/icon-pinterest.svg" alt="" /></span>
+              </div>
+            </div>
+            <div class="pr-8">
+              <button
+                id="btn"
+                type="button"
+                class="bg-GrayishBlue px-3 py-2 rounded-full"
+              >
+                <ion-icon
+                  class="text-LightGrayishBlue"
                   name="arrow-redo"
                 ></ion-icon>
               </button>
             </div>
           </div>
         </div>
+        <!-- for desktop screen make another layout here and make it hidden on small screens with tailwind -->
       </div>
     </main>
 
