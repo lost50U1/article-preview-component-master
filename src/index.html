@@ -39,9 +39,11 @@
     class="bg-LightGrayishBlue grid place-content-center h-screen font-poppins"
   >
     <main
-      class="w-[85%] sm:max-w-[735px] sm:w-full mx-auto bg-white rounded-xl overflow-hidden sm:flex shadow-lg"
+      class="w-[85%] sm:max-w-[735px] sm:w-full mx-auto bg-white rounded-xl sm:flex shadow-lg"
     >
-      <div class="sm:w-[40%]">
+      <div
+        class="sm:w-[40%] overflow-hidden rounded-none rounded-t-xl sm:rounded-none sm:rounded-l-xl"
+      >
         <img
           class="object-cover w-full h-full"
           src="images/drawers.jpg"
@@ -62,7 +64,9 @@
             you make any room feel complete.
           </p>
         </div>
+        <!-- footer -->
         <div id="footer">
+          <!-- footer default -->
           <div
             id="footer-container"
             class="flex justify-between items-center w-full pt-4 pb-4"
@@ -83,46 +87,72 @@
                 <p class="text-GrayishBlue">28 Jun 2020</p>
               </div>
             </div>
-            <div class="pr-8">
+            <!-- desktop tooltip  -->
+            <div class="pr-8 relative">
               <button
                 id="btn"
                 type="button"
-                class="bg-LightGrayishBlue hover:bg-GrayishBlue active:bg-GrayishBlue px-3 py-2 rounded-full"
+                class="button bg-LightGrayishBlue hidden sm:block hover:bg-GrayishBlue active:bg-GrayishBlue px-3 py-2 rounded-full"
               >
                 <ion-icon
                   class="text-VeryDarkGrayishBlue hover:text-LightGrayishBlue active:text-LightGrayishBlue"
                   name="arrow-redo"
                 ></ion-icon>
               </button>
-            </div>
-          </div>
-          <div
-            id="footer-container2"
-            class="flex justify-between items-center w-full pt-4 pb-4 hidden bg-VeryDarkGrayishBlue"
-          >
-            <div class="flex items-center gap-5 pl-8">
-              <div class="flex items-center gap-4">
-                <p class="uppercase text-GrayishBlue tracking-[.25em]">share</p>
-                <span><img src="images/icon-facebook.svg" alt="" /></span>
-                <span><img src="images/icon-twitter.svg" alt="" /></span>
-                <span><img src="images/icon-pinterest.svg" alt="" /></span>
-              </div>
-            </div>
-            <div class="pr-8">
               <button
-                id="btn"
+                id="btn2"
                 type="button"
-                class="bg-GrayishBlue px-3 py-2 rounded-full"
+                class="button bg-LightGrayishBlue hover:bg-GrayishBlue active:bg-GrayishBlue px-3 py-2 rounded-full block sm:hidden"
               >
                 <ion-icon
-                  class="text-LightGrayishBlue"
+                  class="text-VeryDarkGrayishBlue hover:text-LightGrayishBlue active:text-LightGrayishBlue"
                   name="arrow-redo"
                 ></ion-icon>
               </button>
+              <div
+                id="tooltip"
+                class="bg-VeryDarkGrayishBlue hidden sm:justify-center absolute bottom-[4rem] min-w-64 py-5 left-[-150%] rounded-xl after:content-[''] after:absolute after:left-1/2 after:top-[100%] after:-translate-x-1/2 after:border-8 after:border-x-white after:border-b-white after:border-t-VeryDarkGrayishBlue"
+              >
+                <div class="flex justify-center gap-4">
+                  <p class="uppercase text-GrayishBlue tracking-[.25em]">
+                    share
+                  </p>
+                  <span><img src="images/icon-facebook.svg" alt="" /></span>
+                  <span><img src="images/icon-twitter.svg" alt="" /></span>
+                  <span><img src="images/icon-pinterest.svg" alt="" /></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- footer active state -->
+          <div
+            id="footer-container2"
+            class="mobile hidden w-full pt-4 pb-4 bg-VeryDarkGrayishBlue rounded-b-xl"
+          >
+            <div class="flex">
+              <div class="flex justify-between gap-5 px-8 w-full">
+                <div class="flex items-center gap-4">
+                  <p class="uppercase text-GrayishBlue tracking-[.25em]">
+                    share
+                  </p>
+                  <span><img src="images/icon-facebook.svg" alt="" /></span>
+                  <span><img src="images/icon-twitter.svg" alt="" /></span>
+                  <span><img src="images/icon-pinterest.svg" alt="" /></span>
+                </div>
+                <button
+                  id="btn3"
+                  type="button"
+                  class="button bg-GrayishBlue px-3 py-2 rounded-full"
+                >
+                  <ion-icon
+                    class="text-LightGrayishBlue"
+                    name="arrow-redo"
+                  ></ion-icon>
+                </button>
+              </div>
             </div>
           </div>
         </div>
-        <!-- for desktop screen make another layout here and make it hidden on small screens with tailwind -->
       </div>
     </main>
 
